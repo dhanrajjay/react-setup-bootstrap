@@ -1,0 +1,20 @@
+{
+	"messages": {
+		"header": "Header Freanch",
+		"new": {
+			"header": "New Header French"
+		},
+		"agency": "Find an agency French",
+		"footer": {
+			"newroom": "Newsroom French",
+			"carrers": "Carrers French",
+			"contact": "Contact US French",
+			"blog": "blog French",
+			"sitemap": "Site map French",
+			"termsofuse": "Terms of use French",
+			"privacy": "Privacy Statement French",
+			"allstate": "All State US French",
+			"copyright": "©2020 COPYRIGHT ALLSTATE French"
+		}
+	}
+}

@@ -1,0 +1,20 @@
+{
+	"messages": {
+		"header": "Header English",
+		"new": {
+			"header": "New Header English"
+		},
+		"agency": "Find an agency",
+		"footer": {
+			"newroom": "Newsroom",
+			"carrers": "Carrers",
+			"contact": "Contact US",
+			"blog": "blog",
+			"sitemap": "Site map",
+			"termsofuse": "Terms of use",
+			"privacy": "Privacy Statement",
+			"allstate": "All State US",
+			"copyright": "©2020 COPYRIGHT ALLSTATE"
+		}
+	}
+}
