@@ -6,7 +6,7 @@ import i18n from '../i18n';
 
 export default function Header() {
   return (
-    <div>
+    <div style={{background: 'blue', color: 'white'}}>
       <section>
         <section>
             <img src={"../logo.svg"} alt="Company Logo" />

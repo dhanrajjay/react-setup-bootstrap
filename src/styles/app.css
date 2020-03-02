@@ -1,3 +1,16 @@
 .global-padding {
 	padding: 25px;
 }
+
+.footer {
+	text-align: center;
+}
+
+.footer ul {
+	list-style-type: none;
+}
+
+.footer ul li {
+	display: inline;
+	padding: 20px;
+}
