@@ -3,9 +3,14 @@ import { Translation } from 'react-i18next';
 import Locale from './locale';
 import NavBar from './nav';
 import i18n from '../i18n';
+import { APIService } from "../core/apiService";
 
 class Footer extends Component {
 	render() {
+		// This is the service call made from API SErvice file.
+		APIService.getUserList().then((res) => {
+			console.log(res);
+		})
 		return (			
 			<div>		
 				<Translation>

@@ -1,0 +1,14 @@
+.nav-bar {
+	padding: 10px 0 0 0;
+}
+
+.nav-bar a {
+	height: 30px;
+    width: 120px;
+    display: inline-block;
+}
+
+.active-tab {
+	border-bottom: solid 5px #007bff;
+	color: white;
+}

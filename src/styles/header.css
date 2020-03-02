@@ -1,0 +1,23 @@
+.header {
+	background: blue;
+	color: white;
+}
+
+.header .logo {
+	display: inline-block;
+}
+
+.header .logo img {
+	width: 200px;
+	height: 100px;
+}
+
+.pull-right-container {
+	float: right;
+	padding: 20px;
+}
+
+.agency, .contact {
+	padding: 10px;
+	display: inline-block;
+}

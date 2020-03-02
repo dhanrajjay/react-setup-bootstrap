@@ -37,6 +37,12 @@ module.exports = (env, args) => {
 		          },
 		          'css-loader',
 		        ],
+			  },
+			  {
+				test: /\.(png|svg|jpg|gif)$/,
+				use: [
+					'file-loader',
+				],
 			  }
 			]
 		},
