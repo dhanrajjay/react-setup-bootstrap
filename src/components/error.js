@@ -17,7 +17,7 @@ export class ErrorBoundary extends Component {
 				<div>
 					<h1>Something went wrong</h1>
 					<section>
-						{this.state.errorInfo}
+						{this.state.errorInfo.componentStack}
 					</section>
 				</div>
 			)
