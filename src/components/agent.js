@@ -1,5 +1,5 @@
 import React, { useState, Component } from 'react';
-import { Form, Col, InputGroup, Button } from 'react-bootstrap';
+import { Form, Col, InputGroup, Button, FormControl } from 'react-bootstrap';
 import { Translation } from 'react-i18next';
 import SelectComp from './select';
 
@@ -93,10 +93,19 @@ export default function Agent() {
 			            </select>	
 
 			            <Form.Group>			      	
-							<Form.Label>DROP DOWN MENU</Form.Label>			      	
-					        <select className="browser-default custom-select" value={currency} onChange={handleCurrencyChange}>
-				              {currencyOptions}
-				            </select>			        
+							<Form.Label>FILE UPLOAD</Form.Label>
+				            <InputGroup className="mb-3">
+							    <FormControl disabled
+							      aria-label="Recipient's username"
+							      aria-describedby="basic-addon2"
+							    />
+							    <InputGroup.Append>
+							      <InputGroup.Text id="basic-addon2" style={{width:"100px", height: "38px", padding: "6px 0 0 15px", color: 'white', background: 'gray', cursor: 'pointer'}}>
+									<label htmlFor="fileUpload" style={{cursor: 'pointer'}}>BROWSE</label>
+									<Form.Control id="fileUpload" style={{visibility: 'hidden'}} type="file" />
+							      </InputGroup.Text>
+							    </InputGroup.Append>
+							  </InputGroup>
 					      </Form.Group>		        
 				      </Form.Group>
 				      <Form.Group as={Col} md="1"></Form.Group>
