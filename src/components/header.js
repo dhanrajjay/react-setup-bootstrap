@@ -15,12 +15,12 @@ export default function Header() {
                 t =>
                 <>
                   <div className="app">
-                    <span>{t('header')}</span>
+                    <span>{t('agency')}</span>
                   </div>
 
                   <div className="app">
-                    <span>{t('agency')}</span>
-                  </div>
+                    <span>1-800-255-5225</span>
+                  </div>  
                 </>
               }
             </Translation>

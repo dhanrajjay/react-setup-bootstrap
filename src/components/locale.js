@@ -1,16 +1,26 @@
-import React, { Component } from 'react';
+import React, { useState, Component } from 'react';
+import  { ButtonGroup, Button } from 'react-bootstrap';
 import i18n from '../i18n';
 
 function Locale() {	
+	const [language, setLanguage] = useState('en');
 	const changeLanguage = lang => {
 		i18n.changeLanguage(lang)
 		window.localStorage.setItem('locale', lang);
 	};	
+	const onStateChange = lang => {
+		setLanguage(lang);
+	};
+
+	const updateLang = lang => {
+		changeLanguage(lang);
+		onStateChange(lang);
+	}
 	return(						
-	    <div>
-		    <button onClick={() => changeLanguage('en')} style={{color: ''}}>EN</button>
-	    	<button onClick={() => changeLanguage('fr')} >FR</button>
-	    </div>		    
+	    <ButtonGroup>
+		    <Button active={language === 'en'} onClick={() => updateLang('en')} style={{color: ''}}>EN</Button>
+			<Button active={language === 'fr'} onClick={() => updateLang('fr')} >FR</Button>
+	    </ButtonGroup>
 	)	
 }
 
