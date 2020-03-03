@@ -9,8 +9,7 @@ module.exports = (env, args) => {
 		// To place the output in build directory
 		output: {
 			filename: "bundle.js",
-			path: __dirname + "/dist",
-			publicPath: '/'
+			path: __dirname + "/dist"
 		},
 		module: {
 			rules: [
