@@ -1,5 +1,6 @@
 import React, { useState, Component } from 'react';
 import { Form, Col, InputGroup, Button } from 'react-bootstrap';
+import AgeComponent from './age-component';
 
 export default function Agency() {	
 	// Email Validation
@@ -92,6 +93,10 @@ export default function Agency() {
 					<Form.Control.Feedback type="invalid">
 	                  {phoneNumberError || phoneNumberEmpty}
 	                </Form.Control.Feedback>	
+		        </Form.Group>
+		        <Form.Group>
+		        	<AgeComponent isAgeDropDown={false} />
+		        	<AgeComponent isAgeDropDown={true} />
 		        </Form.Group>
 	       </Form.Row>
 	       <div>

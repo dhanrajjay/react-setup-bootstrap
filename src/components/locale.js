@@ -2,6 +2,10 @@ import React, { useState, Component } from 'react';
 import  { ButtonGroup, Button } from 'react-bootstrap';
 import i18n from '../i18n';
 
+// Redux
+import store from '../store/index';
+import { updateLanguage } from '../store/actions/root-actions';
+
 function Locale() {	
 	const [language, setLanguage] = useState('en');
 	const changeLanguage = lang => {
@@ -10,6 +14,7 @@ function Locale() {
 	};	
 	const onStateChange = lang => {
 		setLanguage(lang);
+		store.dispatch(updateLanguage(lang));
 	};
 
 	const updateLang = lang => {
@@ -23,5 +28,6 @@ function Locale() {
 	    </ButtonGroup>
 	)	
 }
+
 
 export default Locale;

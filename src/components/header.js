@@ -7,7 +7,13 @@ import i18n from '../i18n';
 import logo from '../assets/logo.png';
 import '../styles/header.css';
 
-export default function Header() {
+// Redux
+import { connect } from 'react-redux';
+import store from '../store/index';
+import { getLanguage } from '../store/actions/root-actions';
+
+function Header(props) {
+  console.log(props);
   return (
     <div className="header">
       <Row>
@@ -40,3 +46,9 @@ export default function Header() {
     </div>
   );
 }
+
+const MapStateToProps = (state) => {
+    return state.rootState;
+};
+
+export default connect(MapStateToProps)(Header);
