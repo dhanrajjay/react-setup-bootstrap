@@ -7,7 +7,7 @@ class NavBar extends Component {
 	constructor() {
 		super();
 		this.state = {
-			currentTab: 'agent'
+			currentTab: ''
 		}
 		this.setActiveTab = this.setActiveTab.bind(this);
 	}
@@ -17,11 +17,14 @@ class NavBar extends Component {
 	render() {
 		return (			
 			<nav className="nav-bar">
-			    <Link to="/agent" className={(this.state.currentTab == 'agent') ? 'active-tab' : ''} onClick={() => this.setActiveTab('agent')}>
-					<img src="" alt="alt" /> AGENT
+			    <Link to="/" className={(this.state.currentTab == 'policyType') ? 'active-tab' : ''} onClick={() => this.setActiveTab('policyType')}>
+					<img src="" alt="alt" /> Policy Type
 				</Link>
-		        <Link to="/agency" className={(this.state.currentTab == 'agency') ? 'active-tab' : ''} onClick={() => this.setActiveTab('agency')}>
-					<img src="" alt="alt" /> AGENT
+		        <Link to="/vehicleInformation" className={(this.state.currentTab == 'vehicleInformation') ? 'active-tab' : ''} onClick={() => this.setActiveTab('vehicleInformation')}>
+					<img src="" alt="alt" /> Vehicle Information
+		        </Link>
+		        <Link to="/driverInformation" className={(this.state.currentTab == 'driverInformation') ? 'active-tab' : ''} onClick={() => this.setActiveTab('driverInformation')}>
+					<img src="" alt="alt" /> Driver Information
 		        </Link>
 	        </nav>
 		)

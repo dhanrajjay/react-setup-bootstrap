@@ -3,25 +3,34 @@ import { Switch, Route } from 'react-router-dom';
 import App from '../components/App';
 import Agent from '../components/agent';
 import Agency from '../components/agency';
+import PolicyType from '../components/policyType';
+import VehicleInformation from '../components/vehicleInformation';
+import DriverInformation from '../components/driverInformation';
 
 const ROUTES_LIST = [	
 	{
 		path: "/",
-		key: "AGENT",
+		key: "PolicyType",
 		exact: true,
-		component: Agent
+		component: PolicyType
 	},
 	{
-		path: "/agent",
-		key: "AGENT",
+		path: "/policyType",
+		key: "PolicyType",
 		exact: true,
-		component: Agent
+		component: PolicyType
 	},
 	{
-		path: "/agency",
-		key: "AGENCY",
+		path: "/vehicleInformation",
+		key: "VehicleInformation",
 		exact: true,
-		component: Agency
+		component: VehicleInformation
+	},
+	{
+		path: "/driverInformation",
+		key: "DriverInformation",
+		exact: true,
+		component: DriverInformation
 	}
 ];
 

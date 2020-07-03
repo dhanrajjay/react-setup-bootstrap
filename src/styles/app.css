@@ -14,3 +14,11 @@
 	display: inline;
 	padding: 20px;
 }
+
+.app-background {
+	background: #f5f6f7;	
+}
+
+.active {
+	background-color: #0f7fcc;
+}
