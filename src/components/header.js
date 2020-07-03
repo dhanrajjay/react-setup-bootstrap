@@ -13,7 +13,7 @@ import store from '../store/index';
 import { getLanguage } from '../store/actions/root-actions';
 
 function Header(props) {
-  console.log(props);
+  console.log('Header compoennt', props);
   return (
     <div className="header">
       <Row>

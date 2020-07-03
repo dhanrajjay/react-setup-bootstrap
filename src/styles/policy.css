@@ -1,0 +1,33 @@
+.started-container {
+	background: white;
+	padding: 30px;    
+    -webkit-box-shadow: 0px 1px 6px 3px rgba(204,204,204,1);
+	-moz-box-shadow: 0px 1px 6px 3px rgba(204,204,204,1);
+	box-shadow: 0px 1px 6px 3px rgba(204,204,204,1);
+    border-radius: 10px;
+}
+
+.btn-bar-primary {
+	width: 100px;
+}
+
+.btn-primary {
+	background-color: #f6fafb;
+	color: black;
+	border-color: #dde1e5;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:hover{
+	background-color: #0f7fcc;
+	border-color: #dde1e5;
+}
+
+.save-btn, .save-btn:hover {
+	background: #628e3b;
+	border: none;
+	border-radius: 30px;
+	width: 200px;
+	padding: 10px;
+	color: white;
+}
+
