@@ -33,7 +33,6 @@ function PolicyType() {
 			<Container className="global-padding">
 			  <Row>
 			    <Col className="started-container">
-			    	<TextInput value={textInputModel} label='My Name' onChange={setTextInputModel} />
 			    	<Form>
 					  <Form.Group controlId="formBasicEmail">
 					    <Form.Label>POSTAL CODE</Form.Label>
@@ -56,7 +55,7 @@ function PolicyType() {
 					  		updateFieldValue={updateField} 
 					  		form={form} />
 
-					  <Button variant="primary" type="submit" className="save-btn">
+					  <Button variant="primary" type="submit" className="save-btn pull-right">
 					    Save & Continue ->
 					  </Button>
 					</Form>

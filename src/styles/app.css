@@ -22,3 +22,34 @@
 .active {
 	background-color: #0f7fcc;
 }
+
+.pull-right {
+    float: right
+}
+
+.goback-btn {
+    color: #2055A0;
+    background: transparent;
+    border: none;
+}
+
+.goback-btn:before {
+    content: '\2190';
+    color: gray;
+    margin-right: 5px;
+}
+
+.goback-btn:hover {
+    background: transparent;
+    border: none;
+    color: #2055A0;
+}
+
+.save-btn, .save-btn:hover {
+	background: #628e3b;
+	border: none;
+	border-radius: 30px;
+	width: 200px;
+	padding: 10px;
+	color: white;
+}

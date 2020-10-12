@@ -22,12 +22,3 @@
 	border-color: #dde1e5;
 }
 
-.save-btn, .save-btn:hover {
-	background: #628e3b;
-	border: none;
-	border-radius: 30px;
-	width: 200px;
-	padding: 10px;
-	color: white;
-}
-
