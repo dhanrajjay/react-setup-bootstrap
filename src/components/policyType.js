@@ -1,17 +1,18 @@
 import React, { useState, Component } from 'react';
 import { Container, Form, Row, Col, InputGroup, Button, FormControl, ButtonGroup } from 'react-bootstrap';
+import { TextInput, Select, DateSelection, ButtonGroupList } from 'rv-react-test';
 import PolicyTypeSelection from './policyTypeSelection';
-import TextInput from 'rv-react-test/TextInput';
+import { Translation } from 'react-i18next';
 import '../styles/policy.css';
 
 function PolicyType() {		
 	console.log('Cmoponent rerender');
 	const [form, setFormValue] = useState({
-		postalCode: '',
-		insuranceType: 'car',
-		noOfVehicles: 1,
-		noOfDrivers: 1,
-		houseType: 'Homeowner'
+		postalcode: 'm2m 2m2',
+        insuranceType: 'car',
+        noOfVehicles: 1,
+        noOfDrivers: 1,
+        houseType: 'Homeowner'
 	});
 	const [textInputModel, setTextInputModel] = useState('');
 
@@ -24,48 +25,57 @@ function PolicyType() {
 	});
 
 	const handleClick = (event) => {
-		const newEmail = event.target.value;
-		setTextInputModel(event.target.value);
+		window.sessionStorage.setItem('asPolicyType', JSON.stringify(form));
 	};
 	
 	return (
-		<>
-			<Container className="global-padding">
-			  <Row>
-			    <Col className="started-container">
-			    	<Form>
-					  <Form.Group controlId="formBasicEmail">
-					    <Form.Label>POSTAL CODE</Form.Label>
-					    <Form.Control type="text" placeholder="Enter Postal Code"
-					     name="postalCode" value={form.postalCode} onChange={updateField} />					    
-					  </Form.Group>
+		<Translation>
+            {
+                t =>
+                    <Container>
+                        <Row className="justify-content-md-center screen-padding">
+                            <Col md={6} className="screen-card">
+                                <Form>
+                                        <div>
+                                            <img className="stepimg" alt={t('getStarted.stepalttext')} />
+                                            <label name="getstarted">{t('getStarted.getstarted')}</label>
+                                        </div>
+                                        <TextInput type='text' label={t('getStarted.postalcode')} name="postalcode" value={form.postalcode}
+                                            placeholder="Enter postal code" arialabelledby="Postal Code" disabled="true" onChange={updateField} />
 
-					  <Form.Group controlId="formBasicPassword">
-					    <Form.Label>NUMBER OF VEHICLES</Form.Label>
-					    <InputGroup>
-						    <ButtonGroup aria-label="Basic example">
-						    	<Button style={{width: "120px", height: "60px"}} onClick={updateField} name="insuranceType" value="car" active={form.insuranceType === 'car'}>Car</Button>
-            					<Button style={{width: "120px", height: "60px"}} onClick={updateField} name="insuranceType" value="home" active={form.insuranceType === 'home'}>Home</Button>
-            					<Button style={{width: "160px", height: "60px"}} onClick={updateField} name="insuranceType" value="both" active={form.insuranceType === 'both'}>Combined for more savings</Button>
-							</ButtonGroup>
-						</InputGroup>
-					  </Form.Group>
+                                        <Form.Group controlId="formBasicPassword">
+                                            <Form.Label>{t('getStarted.selectone')}</Form.Label>
+                                            <InputGroup>
+                                                <ButtonGroup aria-label="Basic example">
+                                                    <Button style={{width: "120px", height: "60px"}} onClick={updateField} name="insuranceType" value="car" active={form.insuranceType === 'car'}>
+                                                        <img alt={t('getStarted.autoimgtext')} /><br/>
+                                                        {t('getStarted.autoimgtext')}
+                                                    </Button>
+                                                    <Button style={{width: "120px", height: "60px"}} onClick={updateField} name="insuranceType" value="home" active={form.insuranceType === 'home'}>
+                                                      <img alt={t('getStarted.homeimgtext')} /><br/>
+                                                      {t('getStarted.homeimgtext')}
+                                                    </Button>
+                                                    <Button style={{width: "160px", height: "60px"}} onClick={updateField} name="insuranceType" value="both" active={form.insuranceType === 'both'}>Combined for more savings</Button>
+                                                </ButtonGroup>
+                                            </InputGroup>
+                                        </Form.Group>
 
-					  <PolicyTypeSelection 
-					  		updateFieldValue={updateField} 
-					  		form={form} />
+                                        <PolicyTypeSelection updateFieldValue={updateField} form={form} />
 
-					  <Button variant="primary" type="submit" className="save-btn pull-right">
-					    Save & Continue ->
-					  </Button>
-					</Form>
-			    </Col>
-			    <Col>
-			    	<div>3 Simple steps to get a quote</div>
-			    </Col>
-			  </Row>			  
-			</Container>
-		</>
+                                        <Button onClick={handleClick}>{t('common.savecontinue')} </Button>
+                                </Form>
+                            </Col>
+                            <Col md={6} className="d-none d-md-block screen-padding-right">
+                                <label name="simplesteps" className="simpletext">{t('getStarted.simplesteps')}</label>
+                                <label name="welcometext" className="welcometext">{t('getStarted.welcometext')} </label>
+                                <p name="quoteestimate" className="provideyoutext">{t('getStarted.quoteestimate')}</p>
+                                <p name="quotepremiun" className="provideyoutext">{t('getStarted.quotepremiun')}</p>
+                                <img className="savemoneyimg" alt={t('getStarted.savemoneyimgalttext')} />
+                            </Col>
+                        </Row>
+                    </Container>
+            }
+        </Translation>
 	)
 }
 

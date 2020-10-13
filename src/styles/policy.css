@@ -22,3 +22,65 @@
 	border-color: #dde1e5;
 }
 
+.screen-padding{
+    padding:2rem !important;
+ }
+
+ .screen-padding-right{
+    padding-top: 1rem !important;
+    padding-left:2rem!important;
+ }
+
+ .stepimg{
+   height: 18px;
+   width: 39px;
+   padding-right: 5px;
+ }
+
+ @media (max-width: 650px) {
+    .screen-padding{
+        padding:.75rem !important;
+     }
+     .screen-card{
+        padding:1.5rem !important;
+     }
+ }
+
+ .screen-card{
+    @extend .screen-padding;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 0 0 rgba(63,63,68,0.16), 0 1px 11px 0 rgba(63,63,68,0.15);
+ }
+
+ .simpletext{
+    color: #0054A6;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: -0.49px;
+    line-height: 24px;
+ }
+
+ .welcometext{
+    color: #000000;
+    font-size: 13px;
+    letter-spacing: 0.7px;
+    line-height: 16px;
+ }
+
+ .provideyoutext{
+    color: #4A4A4A;
+    font-size: 12px;
+    letter-spacing: 0.46px;
+    line-height: 17px;
+ }
+
+ .savemoneyimg{
+    height: 237px;
+    width: 424px;
+ }
+
+.screen-padding .btnnowidth{
+     width:95px !important;
+ }
+

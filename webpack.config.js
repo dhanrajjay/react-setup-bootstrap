@@ -66,8 +66,11 @@ module.exports = (env, args) => {
 				filename: "./index.html"
 			}),
 			new MiniCssExtractPlugin("style.css"),
-			new MinifyPlugin()
-		]
+			new MinifyPlugin(),
+		],
+		devServer: {
+            port: 9000
+        }
 	}
 
 	return config;

@@ -1,11 +1,24 @@
 {
 	"messages": {
-		"header": "Header English",
-		"new": {
-			"header": "New Header English"
+		"common":{
+			"savecontinue": "SAVE & CONTINUE"
+		},
+		"header": {
+			"quickquote":"QUICK QUOTE",
+			"stepstogetquote":"3 simple steps to get a quote",
+			"quotetype":"QUOTE TYPE",
+			"vehicle":"VEHICLE",
+			"driver":"DRIVER"
 		},
 		"agency": "Find an agency",
 		"footer": {
+			"gethelp": "Get Help",
+			"contactus": "Contact Us",
+			"findanagency": "Find an agency",
+			"termsofuse": "Terms of Use",
+			"privacystatement": "Privacy Statement",
+			"copyright": "©2020 Copyright Allstate Insurance Company. All Rights Reserved.",
+			"switchlanguage": "Switch Language",
 			"newroom": "Newsroom",
 			"carrers": "Carrers",
 			"contact": "Contact US",
@@ -15,6 +28,26 @@
 			"privacy": "Privacy Statement",
 			"allstate": "All State US",
 			"copyright": "©2020 COPYRIGHT ALLSTATE"
+		},
+		"language": {
+			"switch": "ENGLISH"
+		},
+		"getStarted":{
+			"stepalttext":"STEP 1",
+			"getstarted":"GET STARTED",
+			"postalcode":"POSTAL CODE",
+			"selectone":"SELECT ONE",
+			"autoimgalttext":"Auto",
+			"homeimgalttext":"Home",
+			"numberofvehicle":"NUMBER OF VEHICES",
+			"numberofdriver": "NUMBER OF DRIVER",
+			"simplesteps": "3 simple steps to get a quote",
+			"welcometext":"Welcome to Allstate Quick Quote.",
+			"quoteestimate":"To provide you with an insurance estimate, we need to get to know you better. Please complete the required information in the fields to the left. This information is required to help us create your profile, which is used to calculate your estimate. At Allstate, we recognize that our customers are unique and have different insurance needs.",
+			"quotepremiun":"When calculating your insurance premium, there are many factors to consider such as: age, driving record,claims history and whether you have any convictions. It's important to provide accurate information so that we can help ensure you get the right coverage and the best premium possible.",
+			"savemoneyimgalttext":"Save Money",
+			"autoimgtext": "Auto",
+			"homeimgtext": "Home"
 		}
 	}
 }
