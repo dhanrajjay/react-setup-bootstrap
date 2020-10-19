@@ -48,6 +48,10 @@
 			"savemoneyimgalttext":"Save Money",
 			"autoimgtext": "Auto",
 			"homeimgtext": "Home"
+		},
+		"policyType": {
+			"one": "1",
+			"two": "2"
 		}
 	}
 }

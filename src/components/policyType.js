@@ -10,16 +10,17 @@ function PolicyType() {
 	const [form, setFormValue] = useState({
 		postalcode: 'm2m 2m2',
         insuranceType: 'car',
-        noOfVehicles: 1,
+        noOfVehicles: "1",
         noOfDrivers: 1,
         houseType: 'Homeowner'
 	});
 	const [textInputModel, setTextInputModel] = useState('');
 
-	const updateField = ((event) => {
+	const updateField = ((event, isInnerHTMLElem) => {
+	    let val = isInnerHTMLElem ? event.target.innerHTML : event.target.value;
 		setFormValue({
 			...form,
-			[event.target.name]: event.target.value
+			[event.target.name]: val
 		})
 		console.log(form);
 	});

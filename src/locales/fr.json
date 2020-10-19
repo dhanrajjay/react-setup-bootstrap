@@ -15,6 +15,10 @@
 			"privacy": "Privacy Statement French",
 			"allstate": "All State US French",
 			"copyright": "©2020 COPYRIGHT ALLSTATE French"
+		},
+		"policyType": {
+			"one": "1 French",
+			"two": "2 French"
 		}
 	}
 }
