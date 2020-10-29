@@ -1,8 +1,29 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const MinifyPlugin = require('babel-minify-webpack-plugin');
+const webpack = require('webpack');
 
-module.exports = (env, args) => {	
+module.exports = (env, args) => {
+    var hostUrl='';
+    var setupAPI = function() {
+        switch(process.env.API_ENV) {
+            case 'production':
+                hostUrl = 'https://production';
+                break;
+            case 'qa':
+                hostUrl = 'https://api.github.com';
+                break;
+            case 'preprod':
+                hostUrl = 'https://preprod';
+                break;
+            case 'development':
+            default:
+                hostUrl = 'https://localhost:9000';
+                break;
+        }
+    }
+
+    setupAPI();
 	const config = {
 		// used to know which file caused the error, in the minified compressed files.
 		devtool: (args.mode === 'development') ? 'inline-source-map' : '', 
@@ -67,6 +88,9 @@ module.exports = (env, args) => {
 			}),
 			new MiniCssExtractPlugin("style.css"),
 			new MinifyPlugin(),
+			new webpack.DefinePlugin({
+              '__API_HOST__': JSON.stringify(hostUrl)
+            })
 		],
 		devServer: {
             port: 9000

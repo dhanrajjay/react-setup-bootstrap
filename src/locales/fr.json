@@ -16,9 +16,26 @@
 			"allstate": "All State US French",
 			"copyright": "©2020 COPYRIGHT ALLSTATE French"
 		},
+		"getStarted":{
+			"stepalttext":"STEP 1 Fr",
+			"getstarted":"GET STARTED Fr",
+			"postalcode":"POSTAL CODE Fr",
+			"selectone":"SELECT ONE Fr",
+			"autoimgalttext":"Auto Fr",
+			"homeimgalttext":"Home Fr",
+			"numberofvehicle":"NUMBER OF VEHICES Fr",
+			"numberofdriver": "NUMBER OF DRIVER Fr",
+			"simplesteps": "3 simple steps to get a quote Fr",
+			"welcometext":"Welcome to Allstate Quick Quote Fr.",
+			"quoteestimate":"To provide you with an insurance estimate, we need to get to know you better. Please complete the required information in the fields to the left. This information is required to help us create your profile, which is used to calculate your estimate. At Allstate, we recognize that our customers are unique and have different insurance needs Fr.",
+			"quotepremiun":"When calculating your insurance premium, there are many factors to consider such as: age, driving record,claims history and whether you have any convictions. It's important to provide accurate information so that we can help ensure you get the right coverage and the best premium possible Fr.",
+			"savemoneyimgalttext":"Save Money Fr",
+			"autoimgtext": "Auto Fr",
+			"homeimgtext": "Home Fr"
+		},
 		"policyType": {
-			"one": "1 French",
-			"two": "2 French"
+			"one": "1 Fr",
+			"two": "2 Fr"
 		}
 	}
 }

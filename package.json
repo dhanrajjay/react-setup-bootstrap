@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "dev": "webpack-dev-server --mode development --hot",
-    "prod": "webpack-dev-server --mode production --hot",
+    "dev": "API_ENV=development webpack-dev-server --mode development --hot",
+    "qa": "API_ENV=qa webpack-dev-server --mode development --hot",
+    "prerpod": "API_ENV=preprod webpack-dev-server --mode development --hot",
+    "prod": "API_ENV=prod webpack-dev-server --mode production --hot",
     "dev-bundle": "webpack -w -p",
     "create-webpack-component": "webpack --config webpack-transpile.config --env.entryPoint='./src/components/customComponent.js' --env.outputFile='components.js' --env.outputPath='/dist/agentComp'"
   },
@@ -25,7 +27,7 @@
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.2.0",
     "redux": "^4.0.5",
-    "rv-react-test": "1.2.4"
+    "rv-react-test": "1.3.1"
   },
   "devDependencies": {
     "@babel/core": "^7.10.4",

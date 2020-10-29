@@ -1,6 +1,7 @@
 import React, { useState, Component } from 'react';
 import  { ButtonGroup, Button } from 'react-bootstrap';
 import i18n from '../i18n';
+import { publish } from '../utils/pubSub';
 
 // Redux
 import store from '../store/index';
@@ -14,6 +15,7 @@ function Locale() {
 	};	
 	const onStateChange = lang => {
 		setLanguage(lang);
+		publish('language-changed', {language: lang});
 		store.dispatch(updateLanguage(lang));
 	};
 
