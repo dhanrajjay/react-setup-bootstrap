@@ -3,7 +3,7 @@ import axios from 'axios';
 export let APIService = {
 
 	getUserList: () => {
-		return axios.get(__API_HOST__ + '/users/mapbox');
+		return axios.get(__API_HOST__.host + '/users/mapbox');
 	},
 
 	postUserList: (data) => {
