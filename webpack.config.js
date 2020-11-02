@@ -8,17 +8,29 @@ module.exports = (env, args) => {
     var setupAPI = function() {
         switch(process.env.API_ENV) {
             case 'production':
-                hostUrl = 'https://production';
+                hostUrl = {
+                   image: 'https://production',
+                   host: 'https://production'
+                };
                 break;
             case 'qa':
-                hostUrl = 'https://api.github.com';
+                hostUrl = {
+                   image: 'https://api.github.com',
+                   host: 'https://api.github.com'
+                };
                 break;
             case 'preprod':
-                hostUrl = 'https://preprod';
+                hostUrl = {
+                   image: 'https://preprod',
+                   host: 'https://preprod'
+                };
                 break;
             case 'development':
             default:
-                hostUrl = 'https://localhost:9000';
+                hostUrl = {
+                   image: 'https://www.allstate.com/resources/Allstate/images/hmpg/allstate-logo.png?v=93845497-a7d5-b016-8640-91bac7e36392',
+                   host: 'https://localhost:9000'
+                };
                 break;
         }
     }

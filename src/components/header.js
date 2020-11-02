@@ -19,7 +19,7 @@ function Header(props) {
       <Row>
         <Col>
             <div className="logo">
-              <img src={logo} alt="Company Logo" />
+              <img src={__API_HOST__.image} alt="Company Logo" />
             </div>
         </Col>
         <Col>

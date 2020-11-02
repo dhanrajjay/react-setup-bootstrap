@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "dev": "API_ENV=development webpack-dev-server --mode development --hot",
-    "qa": "API_ENV=qa webpack-dev-server --mode development --hot",
-    "prerpod": "API_ENV=preprod webpack-dev-server --mode development --hot",
-    "prod": "API_ENV=prod webpack-dev-server --mode production --hot",
+    "dev": "set API_ENV=development&& webpack-dev-server --mode development --hot",
+    "qa": "set API_ENV=qa&& webpack-dev-server --mode development --hot",
+    "prerpod": "set API_ENV=preprod&& webpack-dev-server --mode development --hot",
+    "prod": "set API_ENV=prod&& webpack-dev-server --mode production --hot",
     "dev-bundle": "webpack -w -p",
     "create-webpack-component": "webpack --config webpack-transpile.config --env.entryPoint='./src/components/customComponent.js' --env.outputFile='components.js' --env.outputPath='/dist/agentComp'"
   },
