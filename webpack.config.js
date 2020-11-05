@@ -2,39 +2,13 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const MinifyPlugin = require('babel-minify-webpack-plugin');
 const webpack = require('webpack');
+const envConfig = require('./envConfig');
 
 module.exports = (env, args) => {
     var hostUrl='';
     var setupAPI = function() {
-        switch(process.env.API_ENV) {
-            case 'production':
-                hostUrl = {
-                   image: 'https://production',
-                   host: 'https://production'
-                };
-                break;
-            case 'qa':
-                hostUrl = {
-                   image: 'https://api.github.com',
-                   host: 'https://api.github.com'
-                };
-                break;
-            case 'preprod':
-                hostUrl = {
-                   image: 'https://preprod',
-                   host: 'https://preprod'
-                };
-                break;
-            case 'development':
-            default:
-                hostUrl = {
-                   image: 'https://www.allstate.com/resources/Allstate/images/hmpg/allstate-logo.png?v=93845497-a7d5-b016-8640-91bac7e36392',
-                   host: 'https://localhost:9000'
-                };
-                break;
-        }
+        hostUrl = envConfig.getEnvUrl(process.env.API_ENV);
     }
-
     setupAPI();
 	const config = {
 		// used to know which file caused the error, in the minified compressed files.
