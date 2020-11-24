@@ -5,9 +5,9 @@ import PolicyTypeSelection from './policyTypeSelection';
 import { Translation } from 'react-i18next';
 import '../styles/policy.css';
 import { subscribe, unsubscribe } from '../utils/pubSub';
+import { getLangList } from '../utils/utils';
 
 function PolicyType() {
-    console.log(__API_HOST__);
 	const [form, setFormValue] = useState({
 		postalcode: 'm2m 2m2',
         insuranceType: 'car',
@@ -25,7 +25,6 @@ function PolicyType() {
 			...form,
 			[event.target.name]: val
 		})
-		console.log(form);
 	});
 
 	const handleClick = (event) => {
@@ -35,15 +34,11 @@ function PolicyType() {
 	let dropDownList =  [{value: 1, label: '1'}, {value: 2, label: '2'}, {value: 3, label: '3'}];
 
 	const frenchDropDownList =  [{value: 1, label: '1 Fr'}, {value: 2, label: '2 Fr'}, {value: 3, label: '3 Fr'}];
-	console.log(frenchDropDownList);
 
 	useEffect(function() {
-     console.log('use effect');
      subscribe('language-changed', (data) => {
-        dropDownList = frenchDropDownList;
-        console.log(childRef);
+        dropDownList = getLangList(data.language.toUpperCase(), 'GENDER');
         childRef.current.dynamicSelectCb(dropDownList);
-        console.log(data);
      })
      return function cleanup() {
         unsubscribe('language-changed');

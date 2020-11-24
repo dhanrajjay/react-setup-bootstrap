@@ -53,5 +53,13 @@
 			"one": "1",
 			"two": "2"
 		}
+	},
+	"gender": {
+		"male": "Male",
+		"female": "Female"
+	},
+	"martialStatus": {
+		"married": "Married",
+		"unmarried": "UnMarried"
 	}
 }
