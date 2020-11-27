@@ -1,4 +1,5 @@
-import React, { useState, Component, Fragment } from 'react';
+import React, { useState, useEffect, Component, Fragment } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Container, Form, Row, Col, InputGroup, Button, FormControl, ButtonGroup } from 'react-bootstrap';
 
 function VehicleInformation() {	
@@ -10,6 +11,15 @@ function VehicleInformation() {
 }
 
 function VehicleComponent() {
+
+    const location = useLocation();
+
+    useEffect(function() {
+     if (location.pathname === '/vehicleInformation') {
+        console.log("on route change");
+        publish('route-changed', true);
+     }
+    }, [location]);
 
 	const [vehicleForms, setVehicleFormValue] = useState([
 		{ year: '2020', make: 'car', model: 1, isWinterTires: 'yes', vehicleUsage: '', avgKMPerYear: '' },

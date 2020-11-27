@@ -36,9 +36,42 @@ function PolicyType() {
 	const frenchDropDownList =  [{value: 1, label: '1 Fr'}, {value: 2, label: '2 Fr'}, {value: 3, label: '3 Fr'}];
 
 	useEffect(function() {
+
+     // Calling the api will async
+	 const fetchAPI = async (url) => {
+         const response = await fetch(url);
+         return await response.json();
+     };
+
+     const API_KEY_MAP = {
+         'people': 'https://cors-anywhere.herokuapp.com/https://swapi.dev/api/people',
+         'mohan': 'https://cors-anywhere.herokuapp.com/https://swapi.dev/api/people/mohan'
+     }
+
+     function fetchAllData(URL) {
+        var arr = [];
+        for (var i in API_KEY_MAP) {
+            arr.push(API_KEY_MAP[i]);
+        }
+        return Promise.all(arr.map(fetchAPI));
+     }
+
+     fetchAllData().then((results) => {
+        console.log(results);
+     });
+
      subscribe('language-changed', (data) => {
-        dropDownList = getLangList(data.language.toUpperCase(), 'GENDER');
-        childRef.current.dynamicSelectCb(dropDownList);
+        const test = getLangList(data.language.toUpperCase(), 'GENDER');
+        console.log('Promise', test);
+        if (test instanceof Promise) {
+            test.then((data) => {
+                dropDownList = data.results;
+                childRef.current.dynamicSelectCb(data.results);
+            })
+        } else {
+            dropDownList = test;
+            childRef.current.dynamicSelectCb(test);
+        }
      })
      return function cleanup() {
         unsubscribe('language-changed');
